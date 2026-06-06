@@ -1,4 +1,5 @@
 import numpy as np
+AUTORIZAR_RADAR = True
 
 class Ant:
     def __init__(self, n_cidades, alfa, beta):
@@ -9,8 +10,12 @@ class Ant:
         self.distancia_total = 0
 
     def escolher_proxima(self, atual, nao_visitadas, matriz_feromonio, env):
-        usar_radar = self.n_cidades > 30
         
+        if AUTORIZAR_RADAR:
+            usar_radar = self.n_cidades > 30
+        else:
+            usar_radar = False
+
         if usar_radar:
             candidatos = [c for c in env.lista_candidatos[atual] if c in nao_visitadas]
             if not candidatos: 
