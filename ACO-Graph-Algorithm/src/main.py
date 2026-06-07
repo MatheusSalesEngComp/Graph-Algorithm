@@ -8,8 +8,8 @@ from src.agents import PheromoneManager
 from src.trainer import ACOTrainer
 
 
-#SEMENTE = 42
-#np.random.seed(SEMENTE)
+SEMENTE = 42
+np.random.seed(SEMENTE)
 
 if __name__ == "__main__":
     dados_instancia = ler_instancia_real_da_entrada_padrao()
@@ -41,7 +41,8 @@ if __name__ == "__main__":
     print()
     print(f"NAME: {nome_instancia}")
     print(f"COMMENT: Matheus, Dagoberto, Fernanda - Colônia de Formigas")
-    print(f"COMMENT: {tempo_total / 60:.3f}m" if tempo_total > 60 else f"COMMENT: {tempo_total:.3f}s")
+    #print(f"COMMENT: {tempo_total / 60:.3f}m" if tempo_total > 60 else f"COMMENT: {tempo_total:.3f}s")
+    print(f"COMMENT: {tempo_total:.3f}s")
     print("TYPE: TOUR")
     print(f"DIMENSION: {n_cidades_final}")
     print(f"TOTAL WEIGHT: {treinador_final.melhor_distancia_global}")

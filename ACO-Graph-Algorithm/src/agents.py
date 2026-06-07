@@ -1,5 +1,5 @@
 import numpy as np
-AUTORIZAR_RADAR = True
+AUTORIZAR_RADAR = False
 
 class Ant:
     def __init__(self, n_cidades, alfa, beta):
